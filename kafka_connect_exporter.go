@@ -203,7 +203,7 @@ func main() {
 		os.Exit(1)
 	}
 	if !supportedSchema[parseURI.Scheme] {
-		log.Error("schema not supported")
+		log.Errorf("schema not supported '%v'", parseURI.Scheme)
 		os.Exit(1)
 	}
 
